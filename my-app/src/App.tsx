@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { FaInstagram, FaTiktok, FaXTwitter, FaYoutube, FaApple, FaGooglePlay } from 'react-icons/fa6'
 import './App.css'
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <div className="hero">
       <img
@@ -23,7 +26,21 @@ function App() {
           <li className="nav__sep" aria-hidden="true"></li>
           <li><a href="/about">About Us</a></li>
         </ul>
+
+        <button className="nav__hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu">
+          <span className={`nav__hamburger-bar ${menuOpen ? 'open' : ''}`} />
+          <span className={`nav__hamburger-bar ${menuOpen ? 'open' : ''}`} />
+          <span className={`nav__hamburger-bar ${menuOpen ? 'open' : ''}`} />
+        </button>
       </nav>
+
+      {menuOpen && (
+        <div className="mobile-menu">
+          <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="/store" onClick={() => setMenuOpen(false)}>Store</a>
+          <a href="/about" onClick={() => setMenuOpen(false)}>About Us</a>
+        </div>
+      )}
 
       <div className="hero__content">
         <h1 className="hero__headline">
