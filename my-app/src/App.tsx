@@ -15,7 +15,7 @@ function App() {
 
       <nav className="nav">
         <a href="/" className="nav__logo">
-          <img src="/justArc-removebg-preview.png" alt="EVOARX arc icon" className="nav__logo-icon" />
+          <img src="/justArc-white.png" alt="EVOARX arc icon" className="nav__logo-icon" />
           <span className="nav__logo-text">EVOARX</span>
         </a>
 
@@ -72,7 +72,7 @@ function App() {
       <footer className="footer">
         <div className="footer__left">
           <div className="footer__logo">
-            <img src="/justArc-removebg-preview.png" alt="EVOARX arc icon" className="footer__logo-icon" />
+            <img src="/justArc-white.png" alt="EVOARX arc icon" className="footer__logo-icon" />
             <div className="footer__socials">
               <a href="#" aria-label="Instagram"><FaInstagram /></a>
               <a href="#" aria-label="TikTok"><FaTiktok /></a>
