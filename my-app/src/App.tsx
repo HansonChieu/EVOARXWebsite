@@ -47,20 +47,26 @@ function App() {
           Begin Your<br />Evolution Arc
         </h1>
         <div className="store-badges">
-          <a href="#" className="store-badge">
-            <FaApple className="store-badge__icon" />
-            <div className="store-badge__text">
-              <span className="store-badge__sub">Download on the</span>
-              <span className="store-badge__name">App Store</span>
-            </div>
-          </a>
-          <a href="#" className="store-badge">
-            <FaGooglePlay className="store-badge__icon" />
-            <div className="store-badge__text">
-              <span className="store-badge__sub">Get it on</span>
-              <span className="store-badge__name">Google Play</span>
-            </div>
-          </a>
+          <div className="store-badge-wrap">
+            <a href="#" className="store-badge">
+              <FaApple className="store-badge__icon" />
+              <div className="store-badge__text">
+                <span className="store-badge__sub">Download on the</span>
+                <span className="store-badge__name">App Store</span>
+              </div>
+            </a>
+            <span className="coming-soon">Coming Soon</span>
+          </div>
+          <div className="store-badge-wrap">
+            <a href="#" className="store-badge">
+              <FaGooglePlay className="store-badge__icon" />
+              <div className="store-badge__text">
+                <span className="store-badge__sub">Get it on</span>
+                <span className="store-badge__name">Google Play</span>
+              </div>
+            </a>
+            <span className="coming-soon">Coming Soon</span>
+          </div>
         </div>
       </div>
 
