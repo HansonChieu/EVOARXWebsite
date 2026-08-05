@@ -258,21 +258,26 @@
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
-  .about-nav {
-    padding: 20px 24px;
-  }
-
-  .about-nav__links {
-    display: none;
+  .about-hero {
+    height: 70svh;
   }
 
   .about-hero__content {
-    bottom: 40px;
+    bottom: 32px;
     left: 24px;
+    right: 24px;
+  }
+
+  .about-hero__content h1 {
+    font-size: 36px;
+  }
+
+  .about-hero__content p {
+    font-size: 14px;
   }
 
   .about-section {
-    padding: 64px 24px;
+    padding: 56px 24px;
   }
 
   .about-values {
@@ -282,11 +287,11 @@
 
   .about-cta__buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .about-cta__btn {
-    width: 220px;
+    width: 100%;
     text-align: center;
   }
 }

@@ -38,3 +38,17 @@
 .banner:hover .banner__track {
   animation-play-state: paused;
 }
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 8px 0;
+  }
+
+  .banner__item {
+    font-size: 10px;
+  }
+
+  .banner__sep {
+    margin: 0 14px;
+  }
+}

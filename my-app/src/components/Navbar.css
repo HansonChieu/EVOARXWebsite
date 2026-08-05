@@ -216,15 +216,15 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .navbar {
-    padding: 20px 24px;
+    padding: 16px 24px;
   }
 
   .navbar__icon {
-    height: 36px;
+    height: 34px;
   }
 
   .navbar__name {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .navbar__links {
@@ -233,5 +233,27 @@
 
   .navbar__hamburger {
     display: flex;
+  }
+
+  /* Always show background on mobile — no hover available */
+  .navbar--light,
+  .navbar--page {
+    background: #ECEEEE;
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar--light .navbar__name,
+  .navbar--page .navbar__name {
+    color: #1a1a1a;
+  }
+
+  .navbar--light .navbar__icon,
+  .navbar--page .navbar__icon {
+    filter: invert(1);
+  }
+
+  .navbar--light .navbar__bar,
+  .navbar--page .navbar__bar {
+    background: #1a1a1a;
   }
 }
