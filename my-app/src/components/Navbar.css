@@ -1,0 +1,237 @@
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 24px 48px;
+}
+
+/* ── Light theme (legal / contact pages) ── */
+.navbar--light {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar--light .navbar__name {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navbar--light .navbar__icon {
+  filter: none;
+  transition: filter 0.3s ease;
+}
+
+.navbar--light .navbar__links a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s ease;
+}
+
+.navbar--light .navbar__bar {
+  background: #ffffff;
+  transition: background 0.3s ease;
+}
+
+/* hover state */
+.navbar--light:hover {
+  background: #ECEEEE;
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+.navbar--light:hover .navbar__name {
+  color: #1a1a1a;
+}
+
+.navbar--light:hover .navbar__icon {
+  filter: invert(1);
+}
+
+.navbar--light:hover .navbar__links a {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.navbar--light:hover .navbar__links a:hover {
+  color: #F5A623;
+}
+
+.navbar--light:hover .navbar__bar {
+  background: #1a1a1a;
+}
+
+/* ── Page theme (legal / contact — light background) ── */
+.navbar--page {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar--page .navbar__name {
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.navbar--page .navbar__icon {
+  filter: invert(1);
+  transition: filter 0.3s ease;
+}
+
+.navbar--page .navbar__links a {
+  color: rgba(0, 0, 0, 0.55);
+  transition: color 0.3s ease;
+}
+
+.navbar--page .navbar__bar {
+  background: #1a1a1a;
+  transition: background 0.3s ease;
+}
+
+.navbar--page:hover {
+  background: #ECEEEE;
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+.navbar--page:hover .navbar__links a:hover {
+  color: #F5A623;
+}
+
+/* ── Dark theme (hero pages) ── */
+.navbar--dark .navbar__name {
+  color: #ffffff;
+}
+
+.navbar--dark .navbar__links a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar--dark .navbar__links a:hover {
+  color: #F5A623;
+}
+
+.navbar--dark .navbar__bar {
+  background: #ffffff;
+}
+
+/* ── Logo ── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__icon {
+  height: 48px;
+  width: auto;
+}
+
+.navbar__name {
+  font-family: 'Jost', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/* ── Links (centered) ── */
+.navbar__links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__links a {
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.navbar__links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ── Hamburger ── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+  z-index: 20;
+}
+
+.navbar__bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.navbar__bar:nth-child(1).open { transform: translateY(7px) rotate(45deg); }
+.navbar__bar:nth-child(2).open { opacity: 0; }
+.navbar__bar:nth-child(3).open { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile Menu ── */
+.navbar__mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.navbar__mobile-menu a {
+  font-family: 'Jost', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: opacity 0.2s;
+}
+
+.navbar__mobile-menu a:hover {
+  opacity: 0.7;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 24px;
+  }
+
+  .navbar__icon {
+    height: 36px;
+  }
+
+  .navbar__name {
+    font-size: 22px;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+}

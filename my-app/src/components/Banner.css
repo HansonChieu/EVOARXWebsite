@@ -1,0 +1,40 @@
+.banner {
+  width: 100%;
+  background: #1a1a1a;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+  z-index: 20;
+}
+
+.banner__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.banner__item {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+.banner__sep {
+  color: #F5A623;
+  margin: 0 20px;
+  font-size: 10px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.banner:hover .banner__track {
+  animation-play-state: paused;
+}
