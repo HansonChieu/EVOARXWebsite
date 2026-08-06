@@ -11,7 +11,7 @@ export default function AboutUs() {
       {/* Hero */}
       <div className="about-hero">
         <img src="/yoga.jpg" alt="" className="about-hero__bg" />
-        <Navbar theme="dark" />
+        <Navbar theme="light" />
         <div className="about-hero__content">
           <h1>About Us</h1>
           <p>Built for those who refuse to stay the same.</p>
